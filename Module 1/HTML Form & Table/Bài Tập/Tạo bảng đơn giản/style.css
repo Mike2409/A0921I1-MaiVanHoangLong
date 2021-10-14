@@ -1,0 +1,13 @@
+#element1 {
+  float: left;
+}
+#element2 {
+  float: right;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
