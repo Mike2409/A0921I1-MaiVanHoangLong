@@ -1,0 +1,14 @@
+th {
+  color: blue;
+}
+h3 {
+  color: blue;
+  background-color: cadetblue;
+}
+
+.form-regis {
+  width: 300px;
+  height: 280px;
+  border: cornflowerblue;
+  background-color: yellow;
+}

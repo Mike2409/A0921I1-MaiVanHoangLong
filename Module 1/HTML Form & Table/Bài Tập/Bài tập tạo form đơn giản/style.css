@@ -1,0 +1,24 @@
+.container {
+  margin: 200px;
+  padding: 30px;
+  border: 5px solid gray;
+  width: 500px;
+  height: 300px;
+}
+.Header {
+  background-color: orangered;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 1%;
+  align-content: top;
+}
+
+table {
+  border: none;
+  border-collapse: collapse;
+}
+
+td {
+  border: none;
+}
