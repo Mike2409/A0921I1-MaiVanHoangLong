@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển tiền</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th><label>Amount</label></th>
+            <th><label>From Currency:</label></th>
+            <th><label>To Currency:</label></th>
+        </tr>
+        <tr>
+            <td><input type="number" id="number"/></td>
+            <td><select id="income">
+                    <option value="vnd">VND</option>
+                    <option value="usd">USD</option>
+                </select>
+            </td>  
+        
+            <td><select id="outcome">
+                    <option value="vnd">VND</option>
+                    <option value="usd">USD</option>
+                </select>
+            </td>
+
+            <td><button onclick="convert()">Convert</button></td>
+        </tr>
+    </table>
+
+     <p id="result" ></p>
+    <script>
+        function convert(){
+            let number = document.getElementById('number').value;
+            let dauvao = document.getElementById('income').value;
+            let daura = document.getElementById('outcome').value;
+            
+            if( dauvao == daura){
+                result= parseInt(number);
+                document.getElementById("result").innerText= "Result:" +""+ result
+                }
+            if( dauvao == "vnd" && daura == "usd"){
+                result= parseInt(number) / 23000;
+                document.getElementById("result").innerText= "Result:" +""+ result+""+"VND"
+                }
+            if( dauvao == "usd" && daura == "vnd"){
+                result= parseInt(number) * 23000;
+                document.getElementById("result").innerText= "Result:" +""+ result +""+"USD"
+            }
+        }       
+    </script>
+    
+</body>
+</html>
