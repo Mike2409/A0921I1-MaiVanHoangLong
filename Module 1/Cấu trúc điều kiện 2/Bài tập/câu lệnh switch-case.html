@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Năm muốn kiểm tra<input type="number" id="yearinput"/><br>
+    Tháng muốn kiểm tra<input type="number" id="month" min="1" max="12"/>
+    <button onclick="getMonth()">Tính số ngày</button>
+
+    <script>
+        function getMonth(){
+            let a = document.getElementById('month').value;
+            let year = document.getElementById('yearinput').value;
+            let isLeapYear = false;
+
+
+        
+            switch (a) {
+    case '1':
+        alert('31 ngày');
+        break;
+    case '2':
+    if (year % 4 == 0) {
+        isLeapYear = true;
+    } else {   
+    isLeapYear = false;
+  }if (isLeapYear) {
+        alert(year + " is a leap year");
+        alert('29 ngày');
+    }else {
+        alert(year + " is NOT a leap year");
+        alert('28 ngày');
+    }
+        break;
+    case '3':
+        alert('31 ngày');
+        break;
+    case '4':
+        alert('30 ngày');
+        break;
+    case '5':
+        alert('31 ngày');
+        break;
+    case '6':
+        alert('30 ngày');
+        break;
+    case '7':
+        alert('31 ngày');
+        break;
+    case '8':
+        alert('30 ngày');
+        break;
+    case '9':
+        alert('31 ngày');
+        break;
+    case '10':
+        alert('30 ngày');
+        break;
+    case '11':
+        alert('31 ngày');
+        break;
+    case '12':
+        alert('31 ngày');
+        break;
+
+    default:
+        return 0;
+            }
+        }
+    </script>
+</body>
+</html>
