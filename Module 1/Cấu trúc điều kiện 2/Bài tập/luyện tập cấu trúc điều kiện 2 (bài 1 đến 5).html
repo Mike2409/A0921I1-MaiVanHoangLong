@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Bài 1-->
+    Nhập độ C:<Input type="number" id="c"/><br>
+    <p id="result">Độ F là:</p>
+    <button onclick="convert()">Thay đổi</button><br>
+    <!--Bài 2-->
+    Nhập mét:<Input type="number" id="met"/><br>
+    <p id="ketqua">Feet:</p>
+    <button onclick="chuyenDoi()">Thay đổi</button><br>
+    <!--Bài 3-->
+    Nhập cạnh hình vuông:<Input type="number" id="hinhVuong"/><br>
+    <p id="dienTich">Diện tích hình vuông:</p>
+    <button onclick="area()">Tính:</button><br>
+    <!--Bài 4-->
+    Nhập cạnh dài:<Input type="number" id="canhDai"/><br>
+    Nhập cạnh ngắn:<Input type="number" id="canhNgan"/><br>
+    <p id="area">Diện tích hình chữ nhật:</p>
+    <button onclick="area1()">Tính:</button><br>
+    <!--Bài 5-->
+    Nhập chiều cao:<Input type="number" id="chieuCao"/><br>
+    Nhập cạnh đáy:<Input type="number" id="canhDay"/><br>
+    <p id="area2">Diện tích hình tam giác:</p>
+    <button onclick="area2()">Tính:</button><br>
+
+    <script>
+        //Bài 1
+        function convert(){
+            let C = document.getElementById('c').value;
+            let result = C *  9/5 + 32;
+            document.getElementById("result").innerText= "Độ F là:" + result;
+        }
+        //Bài 2
+        function chuyenDoi(){
+            let a = document.getElementById('met').value;
+            let result = a * 3.2808;
+            document.getElementById("ketqua").innerText= "Feet:" + result;
+        }
+        //Bài 3
+        function area(){
+            let C = document.getElementById('hinhVuong').value;
+            let result = C*C;
+            document.getElementById("dienTich").innerText= "Diện tích hình vuông:" + result;
+        }
+        //Bài4
+        function area1(){
+            let a = document.getElementById('canhDai').value;
+            let b = document.getElementById('canhNgan').value;
+            let result = a*b;
+            document.getElementById("area").innerText= "Diện tích hình chữ nhật:" + result;
+        }
+        //Bài5
+        function area2(){
+            let a = document.getElementById('chieuCao').value;
+            let b = document.getElementById('canhDay').value;
+            let result = a*b/2;
+            document.getElementById("area2").innerText= "Diện tích hình tam giác:" + result;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Bài 6</label><br>
+    <p>Phương trình ax + b = 0</p>
+    Nhập số a<input type="number" id="a"/>
+    Nhập số b<input type="number" id="b"/>
+    <button onclick="ok()">Kiểm tra</button><br>
+    <label>Bài 7</label><br>
+    <p>Phương trình ax^2 + bx + c = 0</p>
+    Nhập số a<input type="number" id="a1"/>
+    Nhập số b<input type="number" id="b1"/>
+    Nhập số c<input type="number" id="c1"/>
+    <button onclick="ok1()">Kiểm tra</button>
+
+    <script>
+        //Bài 6
+        function ok(){
+
+        let a = document.getElementById('a').value;
+		let b = document.getElementById('b').value;
+		if (a==0) {
+			if (b==0){
+				alert('vô số nghiệm')
+			}
+			if (b!=0){
+				alert('vô nghiệm')
+			}
+		}else
+		var x = -b/a
+		alert('x = ' + x)
+        }
+
+        //Bài 7
+        function ok1(){
+            let a = document.getElementById('a1').value;
+            let b = document.getElementById('b1').value;
+            let c = document.getElementById('c1').value;
+            let delta = b*b -4*a*c;
+            if (delta < 0){
+                alert("Phương trình vô nghiệm");
+            }else if(delta ==0){
+                alert("Phương trình có nghiện kép X ="+ -b/2*a);
+            }else {
+                let x1 = (-b+Math.sqrt(delta))/2*a;
+                let x2 = (-b-Math.sqrt(delta))/2*a;
+
+                alert("Phương trình có 2 nghiệm x1 ="+x1 + "và x2 =" + x2);
+
+            }
+
+        }
+    </script>
+</body>
+</html>
