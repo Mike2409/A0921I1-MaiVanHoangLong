@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cấu trúc điều kiện 1</title>
+</head>
+<body>
+    <lable>Bài 1</lable><br>
+    Nhập số A<input type="number" id="input1"/><br>
+    Nhập số B<input type="number" id="input2"/><br>
+    <button onclick="divide()">Kiểm tra</button><br>
+
+    <lable>Bài 2</lable><br>
+    Nhập tuổi của bạn<input type="number" id="age"/><br>
+    <button onclick="toGrade10()">Kiểm tra tuổi</button><br>
+
+    <lable>Bài 3</lable><br>
+    Nhập số cần kiểm tra<input type="number" id="soNguyen"/><br>
+    <button onclick="float()">Kiểm tra</button><br>
+
+    <lable>Bài 4</lable><br>
+    <button onclick="highestNumber()">Kiểm tra 3 số</button><br>
+
+    <lable>Bài 5</lable><br>
+    Bài kiểm tra miệng<input type="number" id="heSo1"/><br>
+    Bài kiểm tra giữa kì<input type="number" id="heSo2"/><br>
+    Bài kiểm tra cuối kì<input type="number" id="heSo3"/><br>
+    <button onclick="kiemtra()"> Kiếm tra</button><br>
+
+    <lable>Bài 6</lable><br>
+    Nhập mức chỉ tiêu cần đạt<input type="number" id="target"/>
+    <button onclick="commission()">Giá trị hoa hồng nhận được</button><br>
+
+    <lable>Bài 7</lable>
+    <button onclick="phoneCharge()">Tính cước điện thoại</button>
+
+<script>
+    //bài 1
+    function divide(){
+        let a = document.getElementById('input1').value;
+        let b = document.getElementById('input2').value;
+        let evennum = true;
+
+        if (a % b == 0) {
+            evennum = true;
+        } else {   
+            evennum = false;
+        }if (evennum) {
+            alert("a chia hết cho b");
+        }else {
+            alert("a không chia hết cho b");
+        }
+    }
+    //bài 2
+    function toGrade10(){
+        let c = document.getElementById('age').value;
+
+        if (c < 16) {
+            alert("bạn chưa đủ tuổi vào lớp 10");
+        } else { 
+            alert("bạn đã đủ tuổi vào lớp 10");
+        }
+    }
+    //bài 3
+    function float(){
+        let d = document.getElementById('soNguyen').value;
+        if(d > 0) {
+            document.write("Đây là số lớn hơn 0");
+        } else if(d == 0) {
+            document.write("Số này bằng 0");
+        } else {
+            document.write("Số này nhỏ hơn 0")
+        }
+    }
+    //bài 4
+    function highestNumber(){
+        var a = prompt("Nhập số đầu tiên:");
+	    var b = prompt("Nhập số thứ hai:");
+	    var c = prompt("Nhập số thứ ba:");
+	document.write("Số lớn nhất là:" + Math.max(a,b,c));
+    }
+    //bài 5
+    function kiemtra(){
+        let a = document.getElementById('heSo1').value;
+        let b = document.getElementById('heSo2').value;
+        let c = document.getElementById('heSo3').value;
+        let result= parseFloat((a*1 +b*2+c*3)/6) ;
+
+        if(result>=8){
+            alert('Giỏi');
+        }else if(result>=6.5){
+            alert('Khá');
+        }else{
+            alert('TB');
+        }
+    }
+    //bài 6
+    function commission(){
+        let e = prompt("Doanh số bán hàng:");
+        let f = document.getElementById('target').value;
+        if (e / f * 100 < 35 ){
+            alert("Bạn không nhận được hoa hồng")
+        }else if (34 < e / f * 100 && e/f*100 < 60 ){
+            alert("Bạn nhận được 5% tiền hoa hồng:"+ e/100*5)
+        }else{
+            alert("Bạn nhận được 10% tiền hoa hồng:"+ e/100*10)
+        }
+    }
+
+    //bài 7
+    function phoneCharge(){
+        let a = prompt("Tổng số phút gọi:");
+
+    }
+</script>
+
+</body>
+</html>
