@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></canvas>
+    <script>
+        let retangle = function(length, height){
+            this.length = length;
+            this.height = height;
+
+            this.getLength = function() {
+                return length;
+            }
+            this.getHeight = function() {
+                return height;
+            }
+            this.getArea = function() {
+            return length * height;
+            }
+            this.getPerimeter =function() {
+            return length*2 + height*2;
+            }
+        }
+
+        let Retangle = new retangle(30, 20);
+        let length = Retangle.getLength();
+        let height = Retangle.getHeight();
+        let perimeter = Retangle.getPerimeter();
+        let area = Retangle.getArea();
+
+        alert("Length: " + length + "; Height: " + height +"; perimeter: " + perimeter + "; area: " + area);
+    </script>
+</body>
+</html>

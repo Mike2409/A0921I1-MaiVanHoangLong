@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let temperature = function(celsius){
+        if ( celsius >= -273){
+        this.celsius = celsius;
+
+        this.getCelsius = function() {
+            return celsius;
+        }
+
+        this.getKelvin = function() {
+            return celsius + 273;
+        }
+        this.getFahrenheit = function() {
+            return (celsius*1.8) + 32 ;
+        }
+        } else {
+            alert("Cannot calculate")
+        }
+    }
+
+    let result = parseInt(prompt("Nhap vao nhiet do ban muon kiem tra"));
+    let Temperature = new temperature(result);
+    let Celsius = Temperature.getCelsius();
+    let Kelvin = Temperature.getKelvin();
+    let Fahrenheit = Temperature.getFahrenheit();
+
+    alert("Celsius: " + Celsius + "; Kelvin: " + Kelvin +"; Fahrenheit: " + Fahrenheit);
+    </script>
+</body>
+</html>
