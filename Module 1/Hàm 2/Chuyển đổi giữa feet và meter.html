@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="met()" >Chuyển đổi từ foot sang meter</button><br><br>
+    <button onclick="foot()" >Chuyển đổi từ meter sang foot</button>
+    <script>
+    function met(){
+        function footToMeter(foot){
+            var result = "";
+            result = 0.305 * foot;     
+            return result;
+        }
+
+        let foot = parseFloat(prompt("Nhập vào số bạn muốn tìm"));
+        let result = footToMeter(foot)+"meter";
+        document.writeln(result);
+    }
+
+    function foot(){
+        function meterToFoot(meter){
+            var result = "";
+            result = 3.279 * meter; 
+            return result;
+        }
+        
+        let meter = parseFloat(prompt("Nhập vào số bạn muốn tìm"));
+        let result = meterToFoot(meter)+"foot";
+        document.writeln(result);
+    }
+    </script>
+</body>
+</html>
