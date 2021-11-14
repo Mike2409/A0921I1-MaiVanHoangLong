@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let input = prompt('Insert word:')
+    let engDict = ['one','two','three','four','five','six'];
+    let vietDict = ['một','hai','ba','bốn','năm','sáu'];
+
+    if (engDict.includes(input)) {
+        for (let i = 0; i < engDict.length; i++) {
+            if (engDict[i]===input) {
+                alert(engDict[i]+':'+vietDict[i]);
+            }
+        }
+    }else {
+        alert('Cannot define');
+    };
+    </script>
+</body>
+</html>

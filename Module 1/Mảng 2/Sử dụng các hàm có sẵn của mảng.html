@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="bai1()">Kiểm tra bài 1</button><br><br>
+    <button onclick="bai2()">Kiểm tra bài 2</button><br><br>
+    <button onclick="bai3()">Kiểm tra bài 3</button><br><br>
+
+    <script>
+        //Bài 1
+        function bai1(){
+        let myColor= ["Red","Green","White","Black"];
+        document.writeln("Bài 1" +"&nbsp;"+ myColor.join()+"." + "&nbsp;");
+        }
+        //Bài 2
+        function bai2(){
+        let numbers= prompt("Nhập vào số bạn muốn kiểm tra");
+        let str = numbers.toString();
+        let result = [str[0]];
+
+        for (let x=1; x < str.length; x++){
+            if((str[x-1]%2 === 0)&&(str[x]%2 === 0)){
+                result.push('-' ,str[x]);
+            } else {
+                result.push(str[x]);
+            }
+        }
+        console.log(result.join(''));
+        document.writeln("Kiểm tra bài 2 trong màn hình console");
+        }
+
+
+        //Bài 3
+        function bai3(){
+        let y = prompt("Nhập vào dòng bạn muốn thay đổi:")
+        let str = y.toString();
+        let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        let result = [];
+  
+            for( x=0; x<str.length; x++){
+                if(UPPER.indexOf(str[x]) !== -1){
+                    result.push(str[x].toLowerCase());
+                }else if(LOWER.indexOf(str[x]) !== -1){
+                    result.push(str[x].toUpperCase());
+                }else{
+                    result.push(str[x]);
+                }
+            }
+            document.writeln(result.join(''));
+
+        }
+    </script>
+</body>
+</html>
