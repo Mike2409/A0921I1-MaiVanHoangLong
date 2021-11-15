@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="bai2()">Bài 2</button><br><br>
+    <button onclick="bai3()">Bài 3</button><br><br>
+    <button onclick="bai4()">Bài 4</button><br><br>
+    <script>
+        //bai2
+        function bai2(){
+            let a = parseFloat(prompt("Nhập vào độ C bạn muốn chuyển đổi:"));
+            let b = ((a - 32)/9)*5;
+            document.writeln("Độ F sẽ là:" + b);
+        }
+        //bai3
+        function bai3(){
+            let a = parseFloat(prompt("Nhập vào bán kính hình tròn:"));
+            const b = 3.14;
+            let c = a*a*b;
+            document.writeln("Diện tích hình tròn là:"+c);
+        }
+        //bai4
+        function bai4(){
+            let a = parseFloat(prompt("Nhập vào bán kính hình tròn:"));
+            const b = 3.14;
+            let c = 2*a*b;
+            document.writeln("Chu vi hình tròn là:"+c);
+        }
+    </script>
+</body>
+</html>
